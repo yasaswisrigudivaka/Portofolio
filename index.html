@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gudivaka Yasaswi Sri | AIML Student Portfolio</title>
+  <meta name="description" content="Portfolio of Gudivaka Yasaswi Sri, an AIML student at Acharya Nagarjuna University. View projects, skills and contact details.">
+  <meta name="keywords" content="portfolio, AIML student, Python, C, Acharya Nagarjuna University">
+  <meta name="author" content="Gudivaka Yasaswi Sri">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1d4ed8">
+  <meta property="og:title" content="Gudivaka Yasaswi Sri | AIML Student Portfolio">
+  <meta property="og:description" content="AIML student portfolio: projects, skills and contact.">
+  <meta property="og:type" content="website">
+  <style>
+    :root { --bg:#ffffff; --text:#1f2937; --primary:#1d4ed8; --muted:#374151; --card:#f3f4f6; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; font-size:1rem; line-height:1.6; color:var(--text); background:var(--bg); }
+    .skip-link { position:absolute; left:-999px; top:0; background:#000; color:#fff; padding:.75rem 1rem; z-index:100; }
+    .skip-link:focus { left:0; }
+    a { color:var(--primary); }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline:3px solid #f59e0b; outline-offset:2px; }
+    header { background:var(--primary); color:#fff; padding:1rem; }
+    header h1 { margin:0 0 .5rem; font-size:1.5rem; }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.5rem; }
+    nav a { display:inline-block; min-height:48px; line-height:48px; padding:0 1rem; color:#fff; font-weight:bold; text-decoration:none; border:2px solid #fff; border-radius:8px; }
+    nav a:hover { background:#fff; color:var(--primary); }
+    main { max-width:800px; margin:0 auto; padding:1rem; }
+    section { margin-bottom:2rem; }
+    h2 { color:var(--primary); }
+    .card { background:var(--card); padding:1rem; border-radius:8px; margin-bottom:1rem; }
+    .card h3 { margin-top:0; }
+    label { display:block; font-weight:bold; margin-top:1rem; }
+    input, textarea { width:100%; padding:.75rem; font-size:1rem; border:2px solid #4b5563; border-radius:6px; margin-top:.25rem; }
+    button { margin-top:1rem; min-height:48px; padding:0 1.5rem; font-size:1rem; font-weight:bold; background:var(--primary); color:#fff; border:none; border-radius:8px; cursor:pointer; }
+    button:hover { background:#1e40af; }
+    #form-status { margin-top:1rem; font-weight:bold; color:#166534; }
+    footer { background:#111827; color:#fff; text-align:center; padding:1rem; }
+    footer a { color:#93c5fd; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header role="banner">
+    <h1>Gudivaka Yasaswi Sri</h1>
+    <p>AIML Student</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>Hello! I am an AIML student studying at Acharya Nagarjuna University. I enjoy exploring new skills and learning through hands-on projects and internships.</p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <article class="card">
+        <h3>Waste2Resource</h3>
+        <p>A hackathon team project: an AI-based waste reporting and resource-recovery platform built with Python, Flask and SQLite.</p>
+      </article>
+      <article class="card">
+        <h3>Accessible Portfolio Website</h3>
+        <p>This site: a semantic HTML5 portfolio with ARIA labels, SEO meta tags and an accessible contact form.</p>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>C</li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <form id="contact-form" aria-describedby="form-help">
+        <p id="form-help">All fields are required.</p>
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send message</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Gudivaka Yasaswi Sri. Built with semantic HTML5.</p>
+    <p><a href="#main-content">Back to top</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('form-status').textContent = 'Thank you! Your message has been received.';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
